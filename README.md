@@ -85,4 +85,44 @@ in this version of xv6 adding system call is little bit easy. just need to add t
 
 
 
+##### Modify userlevel indicator
+
+Lets say we want to replace the `$` sign with username of the system which can be achieved by editing  `sh.c` file. 
+
+To achieve required result change source code inside `getcmd` method.
+
+first of all, add these two line of code at the beginning of `sh.c`
+
+```c
+#define ANSI_COLOR_RESET  "\x1b[0m"
+#define ANSI_COLOR_RED  "\x1b[31m"
+```
+
+ANSI_COLOR_CODE list:
+
+```c
+#define ANSI_COLOR_BLACK   "\x1b[30m"
+#define ANSI_COLOR_RED     "\x1b[31m"
+#define ANSI_COLOR_GREEN   "\x1b[32m"
+#define ANSI_COLOR_YELLOW  "\x1b[33m"
+#define ANSI_COLOR_BLUE    "\x1b[34m"
+#define ANSI_COLOR_MAGENTA "\x1b[35m"
+#define ANSI_COLOR_CYAN    "\x1b[36m"
+#define ANSI_COLOR_WHITE   "\x1b[37m"
+#define ANSI_COLOR_DEFAULT "\x1b[39m"
+#define ANSI_COLOR_RESET   "\x1b[0m"
+```
+
+now editing `getcmd` method in `sh.c` like the following
+
+```c
+printf(2, ANSI_COLOR_RED "rng70@al\nλ " ANSI_COLOR_RESET);
+```
+
+now open terminal and run `make qemu` and see the userlevel indicator changed
+
+![image](./images/userlevel.png)
+
+
+
 ## official statement [here](./README)

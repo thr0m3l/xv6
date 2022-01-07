@@ -12,7 +12,8 @@
 #define BACK  5
 
 #define MAXARGS 10
-
+#define ANSI_COLOR_RED "\x1b[31m"
+#define ANSI_COLOR_RESET "\x1b[0m"
 struct cmd {
   int type;
 };
@@ -133,7 +134,7 @@ runcmd(struct cmd *cmd)
 int
 getcmd(char *buf, int nbuf)
 {
-  printf(2, "$ ");
+  printf(2, ANSI_COLOR_RED "rng70@al\nλ " ANSI_COLOR_RESET);
   memset(buf, 0, nbuf);
   gets(buf, nbuf);
   if(buf[0] == 0) // EOF
