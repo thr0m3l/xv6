@@ -5,7 +5,7 @@
 This is modified version of official xv6-public version. This version of xv6 was modified for 
 
 *   easy functionality
-    *   adding system calls easily
+    *   [adding system calls easily](#modularize-syscalls)
 *   [bug fixes](#bug-fix)
     *   make qemu "error: writing 1 byte into a region of size 0”
     *   qemu hangs on "Booting from hard disk..."
@@ -69,7 +69,19 @@ otherwise a new qemu terminal will be opened
 
 ---
 
-1.   
+##### Modularize SysCalls
+
+system calls was modularized from here [#162](https://github.com/mit-pdos/xv6-public/pull/162)
+
+adding a system call is not easy as it is needed to be added to 5 different files
+
+*   in **Makefile** _(two places)_
+*   in **syscall.h**
+*   in **syscall.c** _(two places)_
+*   in **usys.S**
+*   in **user.h**
+
+in this version of xv6 adding system call is little bit easy. just need to add two line of code in `syscall.h` and `systemcallnames.h`
 
 
 
