@@ -30,6 +30,7 @@
 00000130 memset
 00000000 main
 000000a0 strcmp
+00000363 shutdown
 0000033b dup
 00000200 stat
 00000a64 _edata

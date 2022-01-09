@@ -58,6 +58,7 @@
 00000000 main
 00001220 createdelete
 000036b0 strcmp
+00003973 shutdown
 00000490 writetest
 0000394b dup
 00002d40 sbrktest

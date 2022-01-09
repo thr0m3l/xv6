@@ -551,10 +551,17 @@ SYSCALL(uptime)
  31b:	b8 0e 00 00 00       	mov    $0xe,%eax
  320:	cd 40                	int    $0x40
  322:	c3                   	ret    
- 323:	66 90                	xchg   %ax,%ax
- 325:	66 90                	xchg   %ax,%ax
- 327:	66 90                	xchg   %ax,%ax
- 329:	66 90                	xchg   %ax,%ax
+
+00000323 <shutdown>:
+#SYSCALL(dup)
+#SYSCALL(getpid)
+#SYSCALL(sbrk)
+#SYSCALL(sleep)
+#SYSCALL(uptime)
+SYSCALL(shutdown)
+ 323:	b8 16 00 00 00       	mov    $0x16,%eax
+ 328:	cd 40                	int    $0x40
+ 32a:	c3                   	ret    
  32b:	66 90                	xchg   %ax,%ax
  32d:	66 90                	xchg   %ax,%ax
  32f:	90                   	nop

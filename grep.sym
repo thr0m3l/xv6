@@ -33,6 +33,7 @@
 00000000 main
 00000310 matchstar
 000003a0 strcmp
+00000663 shutdown
 0000063b dup
 00000e80 buf
 00000500 stat

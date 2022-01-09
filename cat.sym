@@ -31,6 +31,7 @@
 000001d0 memset
 00000000 main
 00000140 strcmp
+00000403 shutdown
 000003db dup
 00000b80 buf
 000002a0 stat

@@ -48,6 +48,7 @@
 00000c90 memset
 00000000 main
 00000c00 strcmp
+00000ec3 shutdown
 00000e9b dup
 000003c0 pipecmd
 00000370 redircmd

@@ -1,2 +1,2 @@
-syscall.o: syscall.c /usr/include/stdc-predef.h types.h defs.h param.h \
- memlayout.h mmu.h proc.h x86.h syscall.h syscallnames.h
+syscall.o: syscall.c /usr/include/stdc-predef.h syscall.h defs.h types.h \
+ memlayout.h mmu.h param.h proc.h x86.h syscallnames.h
