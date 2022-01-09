@@ -1,8 +1,9 @@
-# xv6-rng70
+# xv6
 
 ---
 
-This is modified version of official xv6-public version. This version of xv6 was modified for 
+This is modified version of official xv6-public version. Most of the modifcation credit goes to [Tanin](https://github.com/rng70) and [Afnan](https://github.com/AfnanCSE98).
+
 
 *   easy functionality
     *   [adding system calls easily](#modularize-syscalls)
@@ -16,35 +17,10 @@ This is modified version of official xv6-public version. This version of xv6 was
 
 This version is slightly modified and tested on
 
-*   OS: Garuda Linux
-*   Kernel: 5.15.12-zen1-1-zen
-*   Shell: fish-3.3.1
-*   gcc/g++: 11.1.0
-
-*   ***Installation procedure***
-
-    *   install qemu through pacman
-
-        *   `sudo pacman -S qemu`
-
-    *   clone this repository 
-
-        *   `git clone https://github.com/rng70/xv6-public.git`
-
-    *   go to the cloned repo and build and run
-
-        *   cd xv6-public && make qemu
-
-            **in arch linux `make qemu` work exactly `make qemu-nox` where xv6 run at the current terminal instead of new terminal (at least for fish shell). if it’s not then run `make qemu-nox` to run xv6 at the same terminal**
-
-After successful build and run the terminal will look like this if `qemu-nox` works
-
-![image](./images/qemu-nox.png)
-
-otherwise a new qemu terminal will be opened
-
-![images](./images/qemu.png)
-
+*   OS: Fedora Workstation 35
+*   Kernel: 5.15.12-200.fc35.x86_64
+*   Shell: zsh 5.8
+*   gcc/g++: gcc version 11.2.1 20211203 (Red Hat 11.2.1-7) (GCC) 
 
 
 # Bug-Fix
