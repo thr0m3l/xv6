@@ -39,3 +39,4 @@ void *malloc(uint);
 void free(void *);
 int atoi(const char *);
 void shutdown(void);
+int incr(int);

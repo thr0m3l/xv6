@@ -98,6 +98,7 @@ extern int sys_wait(void);
 extern int sys_write(void);
 extern int sys_uptime(void);
 extern int sys_shutdown(void);
+extern int sys_incr(void);
 
 static int (*syscalls[])(void) = {
 #define SYSCALL(name) [SYS_##name] = sys_##name,
@@ -114,6 +115,7 @@ static int (*syscalls[])(void) = {
     [SYS_mknod] sys_mknod,   [SYS_unlink] sys_unlink,
     [SYS_link] sys_link,     [SYS_mkdir] sys_mkdir,
     [SYS_close] sys_close,   [SYS_shutdown] sys_shutdown,
+    [SYS_incr] sys_incr,
 };
 
 void syscall(void) {

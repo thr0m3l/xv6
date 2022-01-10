@@ -72,3 +72,12 @@ void sys_shutdown(void) {
   outw(0xB004, 0x0 | 0x2000);
   outw(0x604, 0x0 | 0x2000);
 }
+
+int sys_incr(void) {
+  int num;
+  argint(0, &num); // retrieving first integer argument
+
+  // cprintf("%d - Inside system call!",num);
+
+  return num + 1;
+}
