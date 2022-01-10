@@ -4,6 +4,7 @@
 #include "mmu.h"
 #include "param.h"
 #include "proc.h"
+#include "stat.h"
 #include "types.h"
 #include "x86.h"
 
@@ -80,4 +81,16 @@ int sys_incr(void) {
   // cprintf("%d - Inside system call!",num);
 
   return num + 1;
+}
+
+int sys_add(void) {
+  struct mystat *ct;
+  argptr(0, (void *)&ct, sizeof(*ct));
+  int s = 0;
+  int i;
+  for (i = 0; i < ct->sz; i++) {
+    s += ct->nums[i];
+    // cprintf("%d " , ct->nums[i]);
+  }
+  return s;
 }

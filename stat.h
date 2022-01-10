@@ -9,3 +9,8 @@ struct stat {
   short nlink;       // Number of links to file
   unsigned int size; // Size of file in bytes
 };
+
+struct mystat {
+  int *nums;
+  int sz;
+};

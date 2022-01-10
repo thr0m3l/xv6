@@ -32,3 +32,4 @@
 #SYSCALL(uptime)
 SYSCALL(shutdown)
 SYSCALL(incr)
+SYSCALL(add)

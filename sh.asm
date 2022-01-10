@@ -2140,10 +2140,12 @@ SYSCALL(incr)
      eeb:	b8 17 00 00 00       	mov    $0x17,%eax
      ef0:	cd 40                	int    $0x40
      ef2:	c3                   	ret    
-     ef3:	66 90                	xchg   %ax,%ax
-     ef5:	66 90                	xchg   %ax,%ax
-     ef7:	66 90                	xchg   %ax,%ax
-     ef9:	66 90                	xchg   %ax,%ax
+
+00000ef3 <add>:
+SYSCALL(add)
+     ef3:	b8 18 00 00 00       	mov    $0x18,%eax
+     ef8:	cd 40                	int    $0x40
+     efa:	c3                   	ret    
      efb:	66 90                	xchg   %ax,%ax
      efd:	66 90                	xchg   %ax,%ax
      eff:	90                   	nop

@@ -1,6 +1,7 @@
 #include "types.h"
 struct stat;
 struct rtcdate;
+struct mystat;
 
 // system calls
 int fork(void);
@@ -40,3 +41,4 @@ void free(void *);
 int atoi(const char *);
 void shutdown(void);
 int incr(int);
+int add(struct mystat *);

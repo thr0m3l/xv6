@@ -38,6 +38,7 @@
 0000394b fstat
 00003923 kill
 00003190 validatetest
+000039a3 add
 000027f0 rmdot
 00003963 chdir
 000009d0 exectest

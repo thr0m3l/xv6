@@ -1023,10 +1023,12 @@ SYSCALL(incr)
  68b:	b8 17 00 00 00       	mov    $0x17,%eax
  690:	cd 40                	int    $0x40
  692:	c3                   	ret    
- 693:	66 90                	xchg   %ax,%ax
- 695:	66 90                	xchg   %ax,%ax
- 697:	66 90                	xchg   %ax,%ax
- 699:	66 90                	xchg   %ax,%ax
+
+00000693 <add>:
+SYSCALL(add)
+ 693:	b8 18 00 00 00       	mov    $0x18,%eax
+ 698:	cd 40                	int    $0x40
+ 69a:	c3                   	ret    
  69b:	66 90                	xchg   %ax,%ax
  69d:	66 90                	xchg   %ax,%ax
  69f:	90                   	nop

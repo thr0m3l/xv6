@@ -30,6 +30,7 @@
 00000e63 write
 00000e9b fstat
 00000e73 kill
+00000ef3 add
 00000eb3 chdir
 00000940 parseline
 000001b0 runcmd

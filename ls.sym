@@ -20,6 +20,7 @@
 000005d3 write
 0000060b fstat
 000005e3 kill
+00000663 add
 00000623 chdir
 000005eb exec
 000005bb wait
