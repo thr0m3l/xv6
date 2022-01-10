@@ -33,3 +33,6 @@
 SYSCALL(shutdown)
 SYSCALL(incr)
 SYSCALL(add)
+SYSCALL(mult)
+SYSCALL(div)
+SYSCALL(mod)

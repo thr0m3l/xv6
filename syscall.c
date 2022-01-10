@@ -100,6 +100,9 @@ extern int sys_uptime(void);
 extern int sys_shutdown(void);
 extern int sys_incr(void);
 extern int sys_add(void);
+extern int sys_mult(void);
+extern int sys_div(void);
+extern int sys_mod(void);
 
 static int (*syscalls[])(void) = {
 #define SYSCALL(name) [SYS_##name] = sys_##name,
@@ -117,6 +120,8 @@ static int (*syscalls[])(void) = {
     [SYS_link] sys_link,     [SYS_mkdir] sys_mkdir,
     [SYS_close] sys_close,   [SYS_shutdown] sys_shutdown,
     [SYS_incr] sys_incr,     [SYS_add] sys_add,
+    [SYS_mult] sys_mult,     [SYS_div] sys_div,
+    [SYS_mod] sys_mod,
 };
 
 void syscall(void) {

@@ -14,3 +14,8 @@ struct mystat {
   int *nums;
   int sz;
 };
+
+struct number {
+  int num1;
+  int num2;
+};

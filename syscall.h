@@ -23,3 +23,6 @@
 #define SYS_shutdown 22
 #define SYS_incr 23
 #define SYS_add 24
+#define SYS_mult 25
+#define SYS_div 26
+#define SYS_mod 27

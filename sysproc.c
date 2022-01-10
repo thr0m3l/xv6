@@ -94,3 +94,21 @@ int sys_add(void) {
   }
   return s;
 }
+
+int sys_mult(void) {
+  struct number *n;
+  argptr(0, (void *)&n, sizeof(*n));
+  return (n->num1 * n->num2);
+}
+
+int sys_div(void) {
+  struct number *n;
+  argptr(0, (void *)&n, sizeof(*n));
+  return (1.0 * n->num1 / n->num2);
+}
+
+int sys_mod(void) {
+  struct number *n;
+  argptr(0, (void *)&n, sizeof(*n));
+  return (n->num1 % n->num2);
+}

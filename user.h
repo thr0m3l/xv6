@@ -2,6 +2,7 @@
 struct stat;
 struct rtcdate;
 struct mystat;
+struct number;
 
 // system calls
 int fork(void);
@@ -42,3 +43,6 @@ int atoi(const char *);
 void shutdown(void);
 int incr(int);
 int add(struct mystat *);
+int mult(struct number *);
+int div(struct number *);
+int mod(struct number *);
